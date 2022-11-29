@@ -9,18 +9,20 @@ import {
   ListItem,
   Divider,
 } from "@mui/material";
-
-export const Copyright = () => {
+import { PropTypes } from "prop-types";
+export const Copyright = (props) => {
+  const { copyrightURL } = props;
   return (
     <Typography variant="body2">
       {"Copyright © "}
-      <Link color="inherit" href="https://mui.com/"></Link>{" "}
+      <Link color="inherit" href={copyrightURL}></Link>{" "}
       {new Date().getFullYear()}
     </Typography>
   );
 };
 
-const Footer = () => {
+const Footer = (props) => {
+  const { siteName, logo, logo2, baseURL } = props;
   return (
     <Box
       component="footer"
@@ -39,19 +41,31 @@ const Footer = () => {
       <Container>
         <Grid container spacing={2}>
           <Grid item xs={12} md={4} sx={{ padding: "2rem" }}>
-            <img src={""} alt="Footer Logo" style={{ width: "100%" }} />
+            <img
+              src={logo}
+              alt={siteName || "Logo"}
+              style={{ width: "100%" }}
+            />
           </Grid>
 
           <Grid item xs={12} md={3} sx={{ textAlign: "left" }}>
-            <img src={"https://i.imgur.com/KikZE4d.png"} alt="Surrey.ca" />
+            <img src={logo2} alt="Logo2" />
           </Grid>
         </Grid>
         <Divider flexItem sx={{ marginTop: "40px", marginBottom: "20px" }} />
 
-        <Copyright />
+        <Copyright copyrightURL={baseURL} />
       </Container>
     </Box>
   );
 };
 
+Footer.propTypes = {
+  logo: PropTypes.string,
+  siteName: PropTypes.string,
+  baseURL: PropTypes.string,
+  logo2: PropTypes.string,
+};
+
+Copyright.propTypes = {};
 export default Footer;

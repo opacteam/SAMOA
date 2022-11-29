@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useId } from "react";
 import {
   AdvancedSearchBanner,
   DescriptionCard,
@@ -8,8 +8,8 @@ import {
   Section,
   SimpleSearchBanner,
   TagCard,
+  Layout,
 } from "./index";
-
 
 const KeysToComponentMap = {
   AdvancedSearchBanner,
@@ -20,15 +20,16 @@ const KeysToComponentMap = {
   Section,
   SimpleSearchBanner,
   TagCard,
+  Layout,
 };
 
 function Component(block) {
+  const key = useId();
+
   if (typeof KeysToComponentMap[block.component] !== "undefined") {
     return React.createElement(
       KeysToComponentMap[block.component],
-      {
-        key: block._id,
-      },
+      { key, ...block.data },
       block.children &&
         (typeof block.children === "string"
           ? block.children

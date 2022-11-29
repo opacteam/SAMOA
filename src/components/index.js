@@ -16,3 +16,5 @@ export { default as SimpleSearchBanner }
 from './SimpleSearchBanner'
 export { default as TagCard }
 from './TagCard';
+export { default as Layout }
+from './Layout'

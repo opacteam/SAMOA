@@ -5,9 +5,9 @@ import SiteLayout from "../../templates/SiteLayout";
 const Layout = ({ children }) => {
   return (
     <>
-      <AppBar {...SiteLayout.AppBar} />
+      <AppBar {...SiteLayout} />
       <Box>{children}</Box>
-      <Footer />
+      <Footer {...SiteLayout} />
     </>
   );
 };
