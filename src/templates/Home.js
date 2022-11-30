@@ -39,7 +39,52 @@ const Home = [{
                 url: "/",
                 urlTitle: "View More",
             },
-            children: []
+            children: [{
+                component: "ImageCarousel",
+                data: {
+                    data: [{
+                            "thumbnail": "https://picsum.photos/400",
+                            "title": "Library"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/450",
+                            "title": "Books"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/500",
+                            "title": "Library"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/550",
+                            "title": "Library"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/600",
+                            "title": "Library"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/650",
+                            "title": "Library"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/700",
+                            "title": "Library"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/750",
+                            "title": "Library"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/800",
+                            "title": "Library"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/850",
+                            "title": "Library"
+                        }
+                    ]
+                }
+            }]
         },
         {
             component: "Section",

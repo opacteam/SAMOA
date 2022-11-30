@@ -1,12 +1,95 @@
-import React from 'react'
-import PropTypes from 'prop-types'
+import React, { useRef, useState, useEffect } from "react";
+import PropTypes from "prop-types";
 
-const index = props => {
+import { Swiper, SwiperSlide } from "swiper/react";
+import SwiperCore, {
+  EffectFlip,
+  Navigation,
+  Pagination,
+  FreeMode,
+} from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import {
+  CarouselBox,
+  CarouselText,
+  CarouselPagination,
+} from "./ImageCarousel.style";
+
+const breakpoints = {
+  600: {
+    slidesPerView: 2,
+  },
+  1200: {
+    slidesPerView: 3,
+  },
+  1300: {
+    slidesPerView: 4,
+  },
+};
+
+SwiperCore.use([Navigation, Pagination, FreeMode]);
+const Carousel = (props) => {
+  let { children } = props;
+
   return (
-    <div>index</div>
-  )
+    <Swiper
+      loop={true}
+      speed={800}
+      modules={[Navigation, Pagination]}
+      slidesPerView={1}
+      breakpoints={breakpoints}
+      style={{ marginTop: "100px", width:'1500px' }}
+      spaceBetween={20}
+      onReachEnd={() => console.log("reach end")}
+      navigation
+      pagination={{
+        el: ".latest-pagination",
+        clickable: true,
+        renderBullet: (index, className) => {
+          return '<div class="' + className + '">' + (index + 1) + "</div>";
+        },
+      }}
+    >
+      {children}
+    </Swiper>
+  );
+};
+function getWindowDimensions() {
+  const { innerWidth: width, innerHeight: height } = window;
+  return {
+    width,
+    height,
+  };
 }
 
-index.propTypes = {}
+const ImageCarousel = (props) => {
+  const [windowDimensions, setWindowDimensions] = useState(
+    getWindowDimensions()
+  );
+  useEffect(() => {
+    function handleResize() {
+      setWindowDimensions(getWindowDimensions());
+    }
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  let { data } = props;
+  return (
+    <Carousel>
+      {data.map((item, i) => (
+        <SwiperSlide key={item.thumbnail + i}>
+          <CarouselBox dimension={windowDimensions} thumbnail={item.thumbnail}>
+            <CarouselText as="p">{item.title}</CarouselText>
+          </CarouselBox>
+        </SwiperSlide>
+      ))}
+    </Carousel>
+  );
+};
 
-export default index
+ImageCarousel.propTypes = {
+  data: PropTypes.array,
+};
+export default ImageCarousel;

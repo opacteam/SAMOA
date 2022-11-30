@@ -2,16 +2,23 @@ import { Container, Card, Typography, Button } from "@mui/material";
 import { styled } from "@mui/material/styles";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
 import PropTypes from "prop-types";
-export const SectionContainer = styled(Container)(({ banner, theme }) => ({
-  backgroundColor: "white",
-  height: "auto",
-  width: "100%",
-  paddingTop: "100px",
-  paddingBottom: "100px",
-  margin: "0 auto",
-  position: "relative",
-  textAlign: "center",
-}));
+export const SectionContainer = styled(Container)(
+  ({ banner, theme, dimension }) => {
+    let { width } = dimension;
+    const MAX_WIDTH = 1500;
+    const BaseHeight = 500;
+    return {
+      backgroundColor: theme.palette.primary,
+     
+      width: "100%",
+      paddingTop: "100px",
+      paddingBottom: "100px",
+      margin: "0 auto",
+      position: "relative",
+      textAlign: "center",
+    };
+  }
+);
 export const SubHeading = styled(Typography)((_) => ({
   opacity: "1",
   fontSize: "3rem",

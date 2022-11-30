@@ -9,6 +9,7 @@ export const BannerContainer = styled(Container)(({ theme, banner }) => ({
   backgroundImage: `url('${banner}')`,
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
+  lineaGradient: "( rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7) )",
   backgroundSize: "cover",
   minHeight: "500px",
   color: "white",
@@ -30,9 +31,9 @@ export const ShadowLayerBox = styled(Box)((_) => ({
 }));
 
 export const SearchBar = styled(Box)(({ theme }) => ({
-  height: "40px",
+  height: "10vh",
+  maxHeight: "40px",
   display: "flex",
-
   width: "100%",
   margin: "0 auto",
   boxShadow: "0px 0px 4px 4px rgba(55,55,55,0.6)",
