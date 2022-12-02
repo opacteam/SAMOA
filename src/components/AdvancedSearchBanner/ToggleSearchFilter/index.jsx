@@ -3,13 +3,13 @@ import { styled } from "@mui/material/styles";
 import { Paper, InputBase, Button, Typography, Chip } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
 import ClearIcon from "@mui/icons-material/Clear";
+import PropTypes from "prop-types";
 const ListItem = styled("li")(({ theme }) => ({
   margin: theme.spacing(0.5),
 }));
 
 const ToggleSearchFilter = (props) => {
   let { data, description } = props;
-  console.log(props);
   const initialState = data.map((e, i) => {
     return {
       key: i,
@@ -89,6 +89,11 @@ const ToggleSearchFilter = (props) => {
       </Paper>
     </>
   );
+};
+
+ToggleSearchFilter.propTypes = {
+  data: PropTypes.object,
+  description: PropTypes.string,
 };
 
 export default ToggleSearchFilter;

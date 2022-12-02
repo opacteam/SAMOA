@@ -14,11 +14,69 @@ const ArchivesSearch = [{
                         { label: "Photographs", field: "IMAGE" },
                         { label: "Textual Records", field: "TEXT" },
                         { label: "Oral Histories", field: "HISTORY" },
+
                     ]
                 }
             },
             collapseSearchFilter: {
+                data: {
+                    description: "More search options",
+                    data: [{
+                            title: "Field 1",
+                            field: "",
+                            data: [
+                                { label: "Test 1", value: "123" },
+                                { label: "Test 2", value: "123" },
+                                { label: "Test 3", value: "123" },
+                                { label: "Test 4", value: "123" },
+                                { label: "Test 5", value: "123" },
+                                { label: "Test 6", value: "123" },
+                                { label: "Test 7", value: "123" },
+                            ],
+                        },
 
+
+                        {
+                            title: "Field 2",
+                            field: "",
+                            data: [
+                                { label: "Test 1", value: "123" },
+                                { label: "Test 2", value: "123" },
+                                { label: "Test 3", value: "123" },
+                                { label: "Test 4", value: "123" },
+                                { label: "Test 5", value: "123" },
+                                { label: "Test 6", value: "123" },
+                                { label: "Test 7", value: "123" },
+                            ]
+                        },
+                        {
+                            title: "Field 3",
+                            field: "",
+                            data: [
+                                { label: "Test 1", value: "123" },
+                                { label: "Test 2", value: "123" },
+                                { label: "Test 3", value: "123" },
+                                { label: "Test 4", value: "123" },
+                                { label: "Test 5", value: "123" },
+                                { label: "Test 6", value: "123" },
+                                { label: "Test 7", value: "123" },
+                            ]
+                        },
+                        {
+                            title: "Field 4",
+                            field: "",
+                            data: [
+                                { label: "Test 1", value: "123" },
+                                { label: "Test 2", value: "123" },
+                                { label: "Test 3", value: "123" },
+                                { label: "Test 4", value: "123" },
+                                { label: "Test 5", value: "123" },
+                                { label: "Test 6", value: "123" },
+                                { label: "Test 7", value: "123" },
+                            ]
+                        }
+                    ]
+                }
 
             }
         },

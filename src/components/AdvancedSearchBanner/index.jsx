@@ -100,17 +100,16 @@ const Banner = (props) => {
             setShow(!show);
           }}
         >
-          Toggle the advanced search
-
-        <br />  <span>
-          {!show ? (
-            <KeyboardDoubleArrowDownIcon />
-          ) : (
-            <KeyboardDoubleArrowUpIcon />
-          )}
-        </span>
+          {collapseSearchFilter.data.description}
+          <br />{" "}
+          <span>
+            {!show ? (
+              <KeyboardDoubleArrowDownIcon />
+            ) : (
+              <KeyboardDoubleArrowUpIcon />
+            )}
+          </span>
         </HoverLink>
-     
       </BannerContainer>
       <CollapseSearchFilter show={show} {...collapseSearchFilter.data} />
     </>
@@ -120,5 +119,7 @@ Banner.propTypes = {
   bannerURL: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
+  toggleSearchFilter: PropTypes.object,
+  collapseSearchFilter: PropTypes.object,
 };
 export default Banner;
