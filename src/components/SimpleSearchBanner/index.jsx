@@ -30,6 +30,7 @@ const Banner = (props) => {
       className="bannerContainer"
       banner={bannerURL}
     >
+      <ShadowLayerBox />
       <Container maxWidth={"xl"}>
         <Grid container spacing={2}>
           <Grid item sm={12}>
@@ -55,14 +56,13 @@ const Banner = (props) => {
                 style={{ height: "55px", fontSize: "1.2rem" }}
                 sx={{ ml: 1, flex: 1 }}
                 placeholder="Enter your search"
-                inputProps={{ "aria-label": "enter your search" }}
+                inputProps={{ "aria-label": "Enter your search" }}
               />
               <Button
                 style={{
                   height: "55px",
                   borderTop: "0",
                   borderTopLeftRadius: "0",
-
                   borderBottomLeftRadius: "0",
                 }}
                 type="submit"

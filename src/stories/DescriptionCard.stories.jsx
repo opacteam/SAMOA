@@ -2,7 +2,7 @@ import React from "react";
 import DescriptionCard from "../components/DescriptionCard";
 
 export default {
-  title: "DescriptionCard",
+  title: "UI Components/DescriptionCard",
   component: DescriptionCard,
 };
 

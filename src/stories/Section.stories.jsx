@@ -2,7 +2,7 @@ import React from "react";
 import Section from "../components/Section";
 
 export default {
-  title: "Section",
+  title: "UI Components/Section",
   component: Section,
 };
 

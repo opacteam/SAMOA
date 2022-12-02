@@ -2,7 +2,7 @@ import React from "react";
 import SimpleSearchBanner from "../components/SimpleSearchBanner";
 
 export default {
-  title: "SimpleSearchBanner",
+  title: "UI Components/SimpleSearchBanner",
   component: SimpleSearchBanner,
 };
 

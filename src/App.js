@@ -2,12 +2,13 @@ import logo from "./logo.svg";
 import "./App.css";
 import Layout from "./components/Layout";
 import Component from "./components/Component";
-import Home from "./pages/Home";
+import GenericPage from "./pages/GenericPage";
 import HomeTemplate from './templates/Home'
+import ArchivesSearchTemplate from "./templates/ArchiveSearch";
 function App() {
   return (
     <div className="App">
-      <Home template={HomeTemplate} />
+      <GenericPage template={ArchivesSearchTemplate} />
     </div>
   );
 }

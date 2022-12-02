@@ -54,34 +54,7 @@ const Home = [{
                             "thumbnail": "https://picsum.photos/500",
                             "title": "Library"
                         },
-                        {
-                            "thumbnail": "https://picsum.photos/550",
-                            "title": "Library"
-                        },
-                        {
-                            "thumbnail": "https://picsum.photos/600",
-                            "title": "Library"
-                        },
-                        {
-                            "thumbnail": "https://picsum.photos/650",
-                            "title": "Library"
-                        },
-                        {
-                            "thumbnail": "https://picsum.photos/700",
-                            "title": "Library"
-                        },
-                        {
-                            "thumbnail": "https://picsum.photos/750",
-                            "title": "Library"
-                        },
-                        {
-                            "thumbnail": "https://picsum.photos/800",
-                            "title": "Library"
-                        },
-                        {
-                            "thumbnail": "https://picsum.photos/850",
-                            "title": "Library"
-                        }
+
                     ]
                 }
             }]
@@ -94,7 +67,28 @@ const Home = [{
                 url: "/",
                 urlTitle: "View More",
             },
-            children: []
+            children: [{
+                    component: "TagCard",
+                    data: {
+                        "tag": "Item",
+                        "title": "Nunc consequat interdum varius",
+                        "description": "John Doe",
+                        "thumbnail": "https://picsum.photos/510"
+                    }
+                },
+
+                {
+                    component: "TagCard",
+                    data: {
+                        "tag": "Document",
+                        "title": "Aliquam malesuada bibendum arcu",
+                        "description": "Jane Doe",
+                        "thumbnail": "https://picsum.photos/520"
+                    },
+                },
+
+
+            ]
         },
         {
             component: "Section",
@@ -104,7 +98,66 @@ const Home = [{
                 url: "/",
                 urlTitle: "View More",
             },
-            children: []
+            children: [{
+                component: "ImageMasonry",
+                data: {
+                    data: [{
+                            "thumbnail": "https://picsum.photos/400/300",
+                            "title": "Library",
+                            url: "/",
+                            urlTitle: "View More"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/410/400",
+                            "title": "Library",
+                            url: "/",
+                            urlTitle: "View More"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/430/500",
+                            "title": "Library",
+                            url: "/",
+                            urlTitle: "View More"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/440/600",
+                            "title": "Library",
+                            url: "/",
+                            urlTitle: "View More"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/450/700",
+                            "title": "Library",
+                            url: "/",
+                            urlTitle: "View More"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/460/800",
+                            "title": "Library",
+                            url: "/",
+                            urlTitle: "View More"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/470/900",
+                            "title": "Library",
+                            url: "/",
+                            urlTitle: "View More"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/480/350",
+                            "title": "Library",
+                            url: "/",
+                            urlTitle: "View More"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/490/450",
+                            "title": "Library",
+                            url: "/",
+                            urlTitle: "View More"
+                        }
+                    ]
+                }
+            }]
         },
         {
             component: "Section",

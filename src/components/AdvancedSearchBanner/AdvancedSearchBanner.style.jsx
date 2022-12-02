@@ -3,7 +3,7 @@ import { styled } from "@mui/material/styles";
 
 const BANNER_HEIGHT = "100vh";
 export const BannerContainer = styled(Container)(({ theme, banner }) => ({
-  paddingTop: "20%",
+  paddingTop: "15%",
   height: BANNER_HEIGHT,
   position: "relative",
   backgroundImage: `url('${banner}')`,
@@ -66,5 +66,18 @@ export const SiteDescription = styled(Typography)(({ theme }) => ({
   fontWeight: "300",
   [theme.breakpoints.down("md")]: {
     fontSize: "1.2rem",
+  },
+}));
+
+export const HoverLink = styled(Typography)(({ theme }) => ({
+  position: "absolute",
+  bottom: "20px",
+  left: "0",
+  right: "0",
+  fontWeight: "900",
+  color: "white",
+  cursor: "pointer",
+  "&:hover": {
+    textDecoration: " underline",
   },
 }));
