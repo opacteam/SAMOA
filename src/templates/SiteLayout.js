@@ -1,16 +1,23 @@
 const SiteLayout = {
 
-    baseURL: "https://",
-    siteName: "Testing Site",
-    logo: "https://images.google.com/",
-    logo2: "https://images.google.com/",
+    baseURL: "/",
+    siteName: "SAMOA OPAC",
+    logo: "https://i.imgur.com/mmS5O3l.png",
+    logo2: "https://i.imgur.com/mmS5O3l.png",
     links: [{
-            url: "http://test.google.com",
-            title: "Link to Test"
+            url: "/",
+            title: "Home"
         },
         {
-            url: "http://test.google.com",
-            title: "Link to Test"
+            url: "/archive",
+            title: "Archive"
+        }, {
+            url: "/artifact",
+            title: "Artifact"
+        },
+        {
+            url: "/faq",
+            title: "FAQ"
         }
     ]
 

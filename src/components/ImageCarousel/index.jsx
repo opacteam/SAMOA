@@ -11,6 +11,7 @@ import SwiperCore, {
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import "swiper/css/free-mode";
 import {
   CarouselBox,
   CarouselText,
@@ -35,12 +36,13 @@ const Carousel = (props) => {
 
   return (
     <Swiper
+      freeMode={true}
       loop={true}
       speed={800}
       modules={[Navigation, Pagination]}
       slidesPerView={1}
       breakpoints={breakpoints}
-      style={{ marginTop: "100px", width:'1500px' }}
+      style={{ marginTop: "100px", width: "1500px" }}
       spaceBetween={20}
       onReachEnd={() => console.log("reach end")}
       navigation

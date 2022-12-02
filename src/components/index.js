@@ -20,6 +20,10 @@ export { default as Layout }
 from './Layout'
 export { default as MediaCard }
 from './MediaCard'
+export { default as MultiTabs }
+from './MultiTabs'
+export { default as ChipStack }
+from './ChipStack'
 export { default as ToggleSearchFilter }
 from './AdvancedSearchBanner/ToggleSearchFilter'
 export { default as CollapseSearchFilter }

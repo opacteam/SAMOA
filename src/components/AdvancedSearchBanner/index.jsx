@@ -47,7 +47,7 @@ const Banner = (props) => {
         banner={bannerURL}
       >
         <ShadowLayerBox />
-        <Container maxWidth={"xl"}>
+        <Container >
           <Grid container spacing={2}>
             <Grid item sm={12}>
               <SiteHeading variant="h1">{heading}</SiteHeading>
@@ -88,12 +88,15 @@ const Banner = (props) => {
                   Search
                 </Button>
               </Paper>
-              <ToggleSearchFilter {...toggleSearchFilter.data} />
+
+              {toggleSearchFilter && (
+                <ToggleSearchFilter {...toggleSearchFilter.data} />
+              )}
             </Grid>
           </Grid>
         </Container>
         <HoverLink
-          component="p"
+          variant="h5"
           color="secondary"
           sx={{}}
           onClick={(_) => {

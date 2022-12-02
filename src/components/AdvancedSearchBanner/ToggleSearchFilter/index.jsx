@@ -36,11 +36,12 @@ const ToggleSearchFilter = (props) => {
     <>
       {" "}
       <Typography
-        component="p"
+        variant="body2"
         style={{
           marginTop: "20px",
           fontWeight: "bold",
           fontSize: "1rem",
+          color: "white",
         }}
       >
         {description}

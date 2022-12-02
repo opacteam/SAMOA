@@ -21,7 +21,7 @@ export const SectionContainer = styled(Container)(
 );
 export const SubHeading = styled(Typography)((_) => ({
   opacity: "1",
-  fontSize: "3rem",
+  fontSize: "2.5rem",
   textTransform: "uppercase",
   fontWeight: "600",
   marginTop:'60px'
@@ -59,6 +59,15 @@ export const ViewMoreText = styled(Typography)(({ theme }) => ({
   },
 }));
 
+export const ActionButton = styled(Button)(({ href, text }) => ({
+  padding: "10px 50px",
+  fontSize: "1.3rem",
+  fontWeight: "bold",
+  marginTop: "20px",
+}));
+
+
+
 export const ViewMore = ({ href, text }) => (
   <ViewMoreText style={{}} as="a" href={href}>
     {text}
@@ -78,4 +87,10 @@ export const SectionHeader = ({ heading, description, url, urlTitle }) => {
       <ViewMore href={url} text={urlTitle} />
     </div>
   );
+};
+
+
+ActionButton.propTypes = {
+  href: PropTypes.string,
+  text: PropTypes.string,
 };

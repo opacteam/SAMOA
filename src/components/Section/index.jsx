@@ -6,7 +6,9 @@ import {
   SubHeading,
   SubDescription,
   ViewMore,
+  ActionButton,
 } from "./Section.style";
+import { useNavigate } from "react-router-dom";
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
@@ -15,7 +17,16 @@ function getWindowDimensions() {
   };
 }
 const Section = (props) => {
-  const { heading, description, url = "/", urlTitle, children } = props;
+  let navigate = useNavigate();
+  const {
+    heading,
+    description,
+    url = "/",
+    urlTitle,
+    children,
+    btnURL,
+    btnTitle,
+  } = props;
   const [windowDimensions, setWindowDimensions] = useState(
     getWindowDimensions()
   );
@@ -28,14 +39,22 @@ const Section = (props) => {
   }, []);
   return (
     <SectionContainer maxWidth={"true"} dimension={windowDimensions}>
-      <Divider  />
+      <Divider />
       <Container maxWidth={"xl"}>
         <div>
           {heading && <SubHeading as="h2">{heading}</SubHeading>}
           {description && <SubDescription as="p">{description}</SubDescription>}
           {urlTitle && <ViewMore href={url} text={urlTitle} />}
         </div>
-
+        {btnURL && (
+          <ActionButton
+            variant="contained"
+            color="secondary"
+            onClick={(_) => navigate(btnURL)}
+          >
+            {btnTitle}
+          </ActionButton>
+        )}
         <Grid container spacing={2} sx={{ marginTop: "30px" }}>
           {children}
         </Grid>
@@ -49,6 +68,8 @@ Section.propTypes = {
   description: PropTypes.string,
   url: PropTypes.string,
   urlTitle: PropTypes.string,
+  btnURL: PropTypes.string,
+  btnTitle: PropTypes.string,
 };
 
 export default Section;

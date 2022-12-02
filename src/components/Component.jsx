@@ -10,6 +10,8 @@ import {
   TagCard,
   MediaCard,
   Layout,
+  MultiTabs,
+  ChipStack,
 } from "./index";
 
 const KeysToComponentMap = {
@@ -23,15 +25,15 @@ const KeysToComponentMap = {
   TagCard,
   MediaCard,
   Layout,
+  MultiTabs,
+  ChipStack,
 };
 
 function Component(block) {
-  const key = useId();
-
   if (typeof KeysToComponentMap[block.component] !== "undefined") {
     return React.createElement(
       KeysToComponentMap[block.component],
-      { key, ...block.data },
+      { ...block.data },
       block.children &&
         (typeof block.children === "string"
           ? block.children

@@ -10,10 +10,13 @@ import {
   AppbarRoot,
   AppbarLinkBox,
 } from "./AppBar.style";
+import {Link, useNavigate} from 'react-router-dom'
+
 const AppBar = (props) => {
   const { links, logo, siteName, baseURL } = props;
   const [isScroll, setIsScroll] = useState(0);
   const [isClicked, setIsClicked] = useState(false);
+  let navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       const scrolled = window.scrollY > 80;
@@ -50,7 +53,7 @@ const AppBar = (props) => {
             >
               {links.map((link, i) => (
                 <AppbarLink
-                  onClick={(_) => (window.location = link.href)}
+                  onClick={(_) => navigate(link.url)}
                   key={link.title}
                 >
                   <Typography variant="a">{link.title}</Typography>
