@@ -11,7 +11,7 @@ export const SectionContainer = styled(Container)(
       backgroundColor: theme.palette.primary,
 
       width: "100%",
-      paddingTop: "100px",
+      paddingTop: "",
       paddingBottom: "100px",
       margin: "0 auto",
       position: "relative",
@@ -24,6 +24,7 @@ export const SubHeading = styled(Typography)((_) => ({
   fontSize: "3rem",
   textTransform: "uppercase",
   fontWeight: "600",
+  marginTop:'60px'
 }));
 
 export const SubDescription = styled(Typography)(({ theme }) => ({

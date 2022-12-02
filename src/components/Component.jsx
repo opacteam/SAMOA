@@ -8,6 +8,7 @@ import {
   Section,
   SimpleSearchBanner,
   TagCard,
+  MediaCard,
   Layout,
 } from "./index";
 
@@ -20,6 +21,7 @@ const KeysToComponentMap = {
   Section,
   SimpleSearchBanner,
   TagCard,
+  MediaCard,
   Layout,
 };
 

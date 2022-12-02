@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 import PropTypes from "prop-types";
-import { Container, Grid } from "@mui/material";
+import { Container, Grid, Divider } from "@mui/material";
 import {
   SectionContainer,
   SubHeading,
@@ -28,6 +28,7 @@ const Section = (props) => {
   }, []);
   return (
     <SectionContainer maxWidth={"true"} dimension={windowDimensions}>
+      <Divider  />
       <Container maxWidth={"xl"}>
         <div>
           {heading && <SubHeading as="h2">{heading}</SubHeading>}
