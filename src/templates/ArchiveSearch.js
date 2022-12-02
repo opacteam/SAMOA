@@ -84,11 +84,32 @@ const ArchivesSearch = [{
         {
             component: "Section",
             data: {
-                heading: "ABOUT US",
-                description: "The Heritage Services Division of the Parks, Recreation & Culture Department operates the facilities and services located at the Surrey Museum, Historic Stewart Farm and the City of Surrey Archives. In addition, Heritage Services facilitates the city-wide distribution and delivery of heritage interpretive activities. We hope to see you at our facilities soon!",
-                url: "/",
-                urlTitle: "View More",
+                heading: "Featured Records",
+                description: "",
+
             },
+            children: [{
+                component: "ImageCarousel",
+                data: {
+                    data: [{
+                            "thumbnail": "https://picsum.photos/400",
+                            "title": "Library"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/450",
+                            "title": "Books"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/500",
+                            "title": "Library"
+                        }, {
+                            "thumbnail": "https://picsum.photos/550",
+                            "title": "Library"
+                        },
+
+                    ]
+                }
+            }]
         }
 
 

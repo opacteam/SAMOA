@@ -9,7 +9,7 @@ export const SectionContainer = styled(Container)(
     const BaseHeight = 500;
     return {
       backgroundColor: theme.palette.primary,
-     
+
       width: "100%",
       paddingTop: "100px",
       paddingBottom: "100px",
@@ -61,18 +61,15 @@ export const ViewMoreText = styled(Typography)(({ theme }) => ({
 export const ViewMore = ({ href, text }) => (
   <ViewMoreText style={{}} as="a" href={href}>
     {text}
-    <span style={{ display: "flex", alignItems: "center" }}>
-      <ArrowRightAltIcon />
-    </span>
+    {text ? (
+      <span style={{ display: "flex", alignItems: "center" }}>
+        <ArrowRightAltIcon />
+      </span>
+    ) : null}
   </ViewMoreText>
 );
 
-export const SectionHeader = ({
-  heading,
-  description,
-  url = "/",
-  urlTitle,
-}) => {
+export const SectionHeader = ({ heading, description, url, urlTitle }) => {
   return (
     <div>
       <SubHeading as="h2">{heading}</SubHeading>

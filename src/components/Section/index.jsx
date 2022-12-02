@@ -30,12 +30,12 @@ const Section = (props) => {
     <SectionContainer maxWidth={"true"} dimension={windowDimensions}>
       <Container maxWidth={"xl"}>
         <div>
-          <SubHeading as="h2">{heading}</SubHeading>
-          <SubDescription as="p">{description}</SubDescription>
-          <ViewMore href={url} text={urlTitle} />
+          {heading && <SubHeading as="h2">{heading}</SubHeading>}
+          {description && <SubDescription as="p">{description}</SubDescription>}
+          {urlTitle && <ViewMore href={url} text={urlTitle} />}
         </div>
 
-        <Grid container spacing={2} sx={{ marginTop: "80px" }}>
+        <Grid container spacing={2} sx={{ marginTop: "30px" }}>
           {children}
         </Grid>
       </Container>
