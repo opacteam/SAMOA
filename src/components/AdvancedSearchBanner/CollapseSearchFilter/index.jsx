@@ -10,9 +10,11 @@ import {
   Item,
   Container,
   Grid,
+  Chip,
+  Divider,
 } from "@mui/material";
 const CollapseSearchFilter = (props) => {
-  let { show, data } = props;
+  let { show, data, description } = props;
   console.log(props);
   return (
     <>
@@ -34,11 +36,18 @@ const CollapseSearchFilter = (props) => {
             </Grid>
           </Container>
         </CardContent>
+        <Divider>
+          <Chip label={description} />
+        </Divider>
       </Collapse>
     </>
   );
 };
 
-CollapseSearchFilter.propTypes = {};
+CollapseSearchFilter.propTypes = {
+  show: PropTypes.bool,
+  data: PropTypes.array,
+  description: PropTypes.string,
+};
 
 export default CollapseSearchFilter;
