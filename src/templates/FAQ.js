@@ -131,7 +131,24 @@
                      }
                  },
              ]
-         }
+         },
+         {
+             component: "Section",
+             data: {
+                 heading: "FAQ's"
+             },
+             children: [{
+                 component: "Accordion",
+                 data: {
+                     data: [
+                         { title: "Where can I create an account", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit laoreet id donec ultrices tincidunt arcu. At lectus urna duis convallis. Elementum tempus egestas sed sed risus." },
+                         { title: "Where can I create an account", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit laoreet id donec ultrices tincidunt arcu. At lectus urna duis convallis. Elementum tempus egestas sed sed risus." },
+                         { title: "Where can I create an account", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit laoreet id donec ultrices tincidunt arcu. At lectus urna duis convallis. Elementum tempus egestas sed sed risus." }, { title: "Where can I create an account", description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Velit laoreet id donec ultrices tincidunt arcu. At lectus urna duis convallis. Elementum tempus egestas sed sed risus." }
+                     ]
+                 }
+             }]
+         },
+
      ]
  }]
 

@@ -30,3 +30,5 @@ export { default as CollapseSearchFilter }
 from './AdvancedSearchBanner/CollapseSearchFilter'
 export { default as DescriptionBox }
 from './DescriptionBox'
+export { default as Accordion }
+from './Accordion'
