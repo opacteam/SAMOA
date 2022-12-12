@@ -22,8 +22,7 @@ import {
 import SearchIcon from "@mui/icons-material/Search";
 import PropTypes from "prop-types";
 const Banner = (props) => {
-  console.log(props)
-  const { bannerURL, heading, description } = props;
+  const { bannerURL, heading, description, noSearchBox, children } = props;
   return (
     <BannerContainer
       maxWidth={"true"}
@@ -38,43 +37,46 @@ const Banner = (props) => {
             <SiteDescription variant="p">{description}</SiteDescription>
           </Grid>
         </Grid>
-        <Grid container spacing={2}>
-          <Grid item md={12} sm={12} style={{ width: "100%" }}>
-            <Paper
-            component="form"
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                width: "100%",
-                maxWidth: "800px",
-                margin: "80px auto",
-                textAlign: "center",
-                boxShadow: "2px 4px 2px 0px rgba(1,1,1,0.5)",
-              }}
-            >
-              <InputBase
-                style={{ height: "55px", fontSize: "1.2rem" }}
-                sx={{ ml: 1, flex: 1 }}
-                placeholder="Enter your search"
-                inputProps={{ "aria-label": "Enter your search" }}
-              />
-              <Button
-                style={{
-                  height: "55px",
-                  borderTop: "0",
-                  borderTopLeftRadius: "0",
-                  borderBottomLeftRadius: "0",
+        {!noSearchBox ? (
+          <Grid container spacing={2}>
+            <Grid item md={12} sm={12} style={{ width: "100%" }}>
+              <Paper
+                component="form"
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  width: "100%",
+                  maxWidth: "800px",
+                  margin: "80px auto",
+                  textAlign: "center",
+                  boxShadow: "2px 4px 2px 0px rgba(1,1,1,0.5)",
                 }}
-                type="submit"
-                aria-label="search"
-                variant="contained"
               >
-                Search
-              </Button>
-            </Paper>
+                <InputBase
+                  style={{ height: "55px", fontSize: "1.2rem" }}
+                  sx={{ ml: 1, flex: 1 }}
+                  placeholder="Enter your search"
+                  inputProps={{ "aria-label": "Enter your search" }}
+                />
+                <Button
+                  style={{
+                    height: "55px",
+                    borderTop: "0",
+                    borderTopLeftRadius: "0",
+                    borderBottomLeftRadius: "0",
+                  }}
+                  type="submit"
+                  aria-label="search"
+                  variant="contained"
+                >
+                  Search
+                </Button>
+              </Paper>
+            </Grid>
           </Grid>
-        </Grid>
+        ) : null}
       </Container>
+      {children}
     </BannerContainer>
   );
 };
@@ -82,5 +84,6 @@ Banner.propTypes = {
   bannerURL: PropTypes.string,
   heading: PropTypes.string,
   description: PropTypes.string,
+  noSearchBox: PropTypes.bool,
 };
 export default Banner;

@@ -8,7 +8,8 @@ import {
   ViewMore,
   ActionButton,
 } from "./Section.style";
-import { useNavigate } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
 function getWindowDimensions() {
   const { innerWidth: width, innerHeight: height } = window;
   return {
@@ -17,7 +18,6 @@ function getWindowDimensions() {
   };
 }
 const Section = (props) => {
-  let navigate = useNavigate();
   const {
     heading,
     description,
@@ -50,7 +50,7 @@ const Section = (props) => {
           <ActionButton
             variant="contained"
             color="secondary"
-            onClick={(_) => navigate(btnURL)}
+            onClick={(_) => (window.location = btnURL)}
           >
             {btnTitle}
           </ActionButton>

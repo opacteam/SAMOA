@@ -28,3 +28,5 @@ export { default as ToggleSearchFilter }
 from './AdvancedSearchBanner/ToggleSearchFilter'
 export { default as CollapseSearchFilter }
 from './AdvancedSearchBanner/CollapseSearchFilter'
+export { default as DescriptionBox }
+from './DescriptionBox'

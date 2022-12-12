@@ -17,3 +17,15 @@ Example.args = {
   url: "/",
   urlTitle: "View More",
 };
+
+export const ExampleWithButton = Template.bind({});
+
+ExampleWithButton.args = {
+  heading: "Lorem Ipsum",
+  description:
+    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ullamcorper a lacus vestibulum sed arcu non odio euismod lacinia. Lacus viverra vitae congue eu consequat ac felis.",
+  url: "/",
+  urlTitle: "View More",
+  btnURL:"/",
+  btnTitle:"Explore"
+};

@@ -10,7 +10,7 @@ export const BannerContainer = styled(Container)(({ theme, banner }) => ({
   backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
   backgroundSize: "cover",
-  minHeight: "500px",
+  minHeight: "750px",
   color: "white",
   textAlign: "center",
   backgroundAttachment: "fixed",

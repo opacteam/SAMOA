@@ -12,6 +12,7 @@ import {
   Layout,
   MultiTabs,
   ChipStack,
+  DescriptionBox,
 } from "./index";
 
 const KeysToComponentMap = {
@@ -27,6 +28,7 @@ const KeysToComponentMap = {
   Layout,
   MultiTabs,
   ChipStack,
+  DescriptionBox
 };
 
 function Component(block) {
