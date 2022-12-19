@@ -6,6 +6,7 @@ import ArchivesSearchTemplate from "./ArchiveSearch";
 import ArtifactSearchTemplate from "./ArtifactSearch";
 import NotFoundPageTemplate from './404';
 import FAQ from './FAQ'
+import Summary from './Summary'
 
 const GenericPage = lazy(() =>
     import ("../pages/GenericPage"));
@@ -15,7 +16,7 @@ const Routes = [
     { path: "/archive", template: ArchivesSearchTemplate },
     { path: "/artifact", template: ArtifactSearchTemplate },
     { path: '/FAQ', template: FAQ },
-    { path: "*", template: NotFoundPageTemplate },
+    { path: '/summary', template: Summary }, { path: "*", template: NotFoundPageTemplate },
 
 ];
 

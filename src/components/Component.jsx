@@ -13,7 +13,8 @@ import {
   MultiTabs,
   ChipStack,
   DescriptionBox,
-  Accordion
+  Accordion,
+  SummaryLayout,
 } from "./index";
 
 const KeysToComponentMap = {
@@ -30,7 +31,8 @@ const KeysToComponentMap = {
   MultiTabs,
   ChipStack,
   DescriptionBox,
-  Accordion
+  Accordion,
+  SummaryLayout,
 };
 
 function Component(block) {

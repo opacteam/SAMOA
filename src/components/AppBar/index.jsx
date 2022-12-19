@@ -33,7 +33,7 @@ const AppBar = (props) => {
 
   return (
     <>
-      <AppbarRoot position="fixed" className="header" scroll={isScroll}>
+      <AppbarRoot className="header" scroll={isScroll}>
         <Container maxWidth={"true"}>
           <AppbarContainer maxWidth={"xl"}>
             <AppbarLogoBox onClick={(_) => (window.location = baseURL)}>

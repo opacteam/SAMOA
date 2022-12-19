@@ -42,6 +42,7 @@ const Banner = (props) => {
             <Grid item md={12} sm={12} style={{ width: "100%" }}>
               <Paper
                 component="form"
+                action="/summary"
                 sx={{
                   display: "flex",
                   alignItems: "center",
