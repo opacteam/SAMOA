@@ -43,7 +43,7 @@ const SummaryHeader = (props) => {
           style={{ width: "100%", maxWidth: "800px", margin: "20px auto" }}
         >
           <Grid item xs={12} style={{ textAlign: "center" }}>
-            <Typography variant="h4">Search the collections</Typography>
+            <Typography variant="h3">Search the collections</Typography>
           </Grid>{" "}
           <Grid item xs={12} md={8}>
             {" "}
@@ -54,11 +54,14 @@ const SummaryHeader = (props) => {
             />
           </Grid>
           <Grid item xs={12} md={4}>
-            <Select placeholder="Keyworld Cluster">
-              <Option value="dog">Dog</Option>
-              <Option value="cat">Cat</Option>
-              <Option value="fish">Fish</Option>
-              <Option value="bird">Bird</Option>
+            <Select
+              placeholder="Keyworld Cluster"
+            >
+              <Option value="fish" default>
+                Keyworld Cluster
+              </Option>
+              <Option value="dog">Object Name</Option>
+              <Option value="cat">Author</Option>
             </Select>
           </Grid>
         </Grid>

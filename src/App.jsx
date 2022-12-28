@@ -23,23 +23,24 @@ import { extendTheme as extendJoyTheme } from "@mui/joy/styles";
 
 function App() {
   const theme = baseTheme;
-  const joyTheme = extendJoyTheme({ cssVarPrefix: "mui" });
+  const joyTheme = extendJoyTheme({ cssVarPrefix: "mui", ...baseTheme });
   const muiTheme = extendMuiTheme(baseTheme);
   return (
     <CssVarsProvider theme={deepmerge(joyTheme, muiTheme)}>
       <Router>
         <Suspense fallback={<Loading />}>
           <Routes>
+            {" "}
             {Routing.map(({ path, template }, i) => (
               <Route
                 key={i}
                 path={path}
                 element={<GenericPage template={template} />}
               />
-            ))}
-          </Routes>
-        </Suspense>
-      </Router>
+            ))}{" "}
+          </Routes>{" "}
+        </Suspense>{" "}
+      </Router>{" "}
     </CssVarsProvider>
     // <div className="App">
     //   <GenericPage template={ArtifactSearchTemplate} />

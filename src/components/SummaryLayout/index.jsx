@@ -5,12 +5,17 @@ import { styled } from "@mui/material/styles";
 import { SummaryContainer, Item } from "./SummaryLayout.style";
 import SummaryHeader from "./SummaryHeader";
 import SummaryFilter from "./SummaryFilter";
+import SummarySubHeader from "./SummarySubHeader";
+import SummaryRecordsView from "./SummaryRecordsView";
 const SummaryLayout = (props) => {
   const { filter } = props;
   return (
     <div>
-      <SummaryContainer elevation={2}>
-        <Grid container spacing={2} rowSpacing={2} sx={{ padding: "16px" }}>
+      <SummaryContainer
+        elevation={2}
+        sx={{ backgroundColor: "rgb(233, 232, 232,0.4)" }}
+      >
+        <Grid container spacing={2} rowSpacing={2}>
           <Grid item xs={12}>
             <SummaryHeader />
           </Grid>
@@ -20,14 +25,10 @@ const SummaryLayout = (props) => {
           <Grid item xs={12} md={9}>
             <Grid container rowSpacing={2}>
               <Grid item xs={12}>
-                <Item sx={{ height: "80px" }} elevation={6}>
-                  xs=6 md=8
-                </Item>
+                <SummarySubHeader />
               </Grid>
               <Grid item xs={12}>
-                <Item sx={{ height: "500px" }} elevation={6}>
-                  xs=6 md=8
-                </Item>
+                <SummaryRecordsView />
               </Grid>
             </Grid>
           </Grid>
