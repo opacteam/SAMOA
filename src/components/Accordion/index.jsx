@@ -27,7 +27,7 @@ const AccordionComponent = (props) => {
               <Typography variant="h5">{item.title}</Typography>
             </AccordionSummary>
             <AccordionDetails>
-              <Typography>{item.description}</Typography>
+              <Typography  variant="p">{item.description}</Typography>
             </AccordionDetails>
           </Accordion>
         );

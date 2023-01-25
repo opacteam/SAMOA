@@ -11,18 +11,20 @@ import {
 } from "@mui/material";
 import PropTypes from "prop-types";
 import { DescriptionCardItem } from "./DescriptionCard.style";
-const DescriptionCardInfo = ({ description, title, urlTitle, url }) => {
+const DescriptionCardInfo = ({ description, title, urlTitle, url, textAlign }) => {
   return (
     <div
-      style={{ margin: "40px  auto", padding: "5px 10px", maxWidth: "600px" }}
+      style={{ margin: "40px  auto", padding: "5px 10px", maxWidth: "600px",  }}
     >
       <Typography variant="h3"> {title}</Typography>
-      <Typography component="p" sx={{ marginTop: "20px", fontSize: "1rem" }}>
+      <Typography component="p" sx={{ marginTop: "20px", fontSize: "1.2rem" , textAlign}}>
         {description}
       </Typography>
-      <Button variant="contained" sx={{ marginTop: "30px" }} size="large">
-        {urlTitle}
-      </Button>
+      {url && (
+        <Button variant="contained" sx={{ marginTop: "30px" }} size="large">
+          {urlTitle}
+        </Button>
+      )}
     </div>
   );
 };
@@ -34,21 +36,23 @@ const DescriptionCard = ({
   description,
   url,
   urlTitle,
+  textAlign = 'center',
+
 }) => {
   return (
     <Grid container xs={12}>
       <Grid
         item
         xs={12}
-        md={6}
+        md={8}
         order={{ xs: 2, sm: 2, md: position % 2 !== 0 ? 1 : 2 }}
       >
-        <DescriptionCardInfo {...{ title, description, url, urlTitle }} />
+        <DescriptionCardInfo {...{ title, description, url, urlTitle, textAlign }} />
       </Grid>
       <Grid
         item
         xs={12}
-        md={6}
+        md={4}
         sx={{ margin: "10px auto" }}
         order={{ xs: 1, sm: 1, md: position % 2 !== 0 ? 2 : 1 }}
       >
@@ -59,11 +63,13 @@ const DescriptionCard = ({
             image={thumbnail}
             alt={heading}
           />
-          <CardContent>
-            <Typography variant="h5" component="div">
-              {heading}
-            </Typography>
-          </CardContent>
+          {heading && (
+            <CardContent>
+              <Typography variant="h5" component="div">
+                {heading}
+              </Typography>
+            </CardContent>
+          )}
         </DescriptionCardItem>
       </Grid>
     </Grid>
@@ -78,5 +84,7 @@ DescriptionCard.propTypes = {
   description: PropTypes.string,
   url: PropTypes.string,
   urlTitle: PropTypes.string,
+  textAlign: PropTypes.string,
+
 };
 export default DescriptionCard;

@@ -163,6 +163,43 @@
              }]
          },
 
+         {
+            component: "Section",
+            data:{
+                heading:"Ordering Archival Records",
+                description:"You can purchase copies of photographs, maps, and recordings from the archival collection by following these steps:"
+            },
+            children:[
+              {
+                component: 'DescriptionCard',
+                data: {
+                    position: 0,
+                    "thumbnail": "http://surrey.minisisinc.com/surrey/images/ordering-1.jpg",
+                    "description": "Search for items with the Archives search page.",
+                    textAlign:'left'
+                },
+              },
+              {
+                component: 'DescriptionCard',
+                data: {
+                    position: 0,
+                    "thumbnail": "http://surrey.minisisinc.com/surrey/images/ordering-2.jpg",
+                    "description": "Click on the item that you are interested in on the summary search results page.",
+                    textAlign:'left'
+                },
+              },
+              {
+                component: 'DescriptionCard',
+                data: {
+                    position: 0,
+                    "thumbnail": "http://surrey.minisisinc.com/surrey/images/ordering-3.jpg",
+                    "description": "When the detailed record view comes up, click on the order button at the end of the record and ﬁll out the form. We will contact you to complete your order.",
+                    textAlign:'left'
+                },
+              }
+            ]
+         }
+
      ]
  }]
 
