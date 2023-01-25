@@ -36,8 +36,9 @@ body {
 }
 
 .MuiMobileStepper-dot {
-    color:white !important;
+    background:white !important;
 }
 
 .MuiMobileStepper-dotActive {
+    background:green !important;
 }
