@@ -17,6 +17,8 @@ export const BannerContainer = styled(Container)(({ theme, banner }) => ({
   [theme.breakpoints.down("md")]: {
     paddingTop: "150px",
   },
+  opacity: 1,
+  transition: "opacity 1s ease-out"
 }));
 
 export const ShadowLayerBox = styled(Box)((_) => ({

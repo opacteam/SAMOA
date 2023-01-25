@@ -13,7 +13,7 @@ import { PropTypes } from "prop-types";
 export const Copyright = (props) => {
   const { copyrightURL, siteName } = props;
   return (
-    <Typography variant="body2"  style={{textAlign:'center', color:'white'}}>
+    <Typography variant="body2" style={{ textAlign: "center", color: "white" }}>
       {"Copyright © "}
       <Link color="inherit" href="https://mui.com/">
         {siteName}
@@ -38,17 +38,25 @@ const Footer = (props) => {
         minHeight: "300px",
         color: "white",
         paddingTop: "80px",
+
         paddingBottom: "20px",
       }}
     >
       <Container>
         <Grid container spacing={2}>
-          <Grid item xs={12} md={4} sx={{ padding: "2rem" }}>
+          <Grid
+            item
+            xs={12}
+            md={4}
+            sx={{ padding: "2rem", display: "flex", alignItems: "center" }}
+          >
             <img
               src={logo}
               alt={siteName || "Logo"}
-              style={{ width: "100%" }}
+              style={{ width: "100px", marginRight: "10px" }}
             />
+
+            <span> {siteName}</span>
           </Grid>
 
           <Grid item xs={12} md={5} container>
@@ -60,9 +68,9 @@ const Footer = (props) => {
                 sx={{ marginBottom: "20px", textAlign: "left" }}
               >
                 <Link
-                  style={{ fontWeight: "bold" , fontSize: '1rem'}}
+                  style={{ fontWeight: "bold", fontSize: "1rem", cursor: "pointer" }}
                   underline="hover"
-                  href={link.href}
+                  href={link.url}
                   color="inherit"
                   index={`FooterLink-${index}`}
                 >

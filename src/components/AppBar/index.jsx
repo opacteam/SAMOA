@@ -42,6 +42,8 @@ const AppBar = (props) => {
                 src={logo}
                 alt={`${siteName} logo`}
               ></AppbarLogo>
+
+              <span> {siteName}</span>
             </AppbarLogoBox>
 
             <AppbarLinkBox
@@ -51,7 +53,7 @@ const AppBar = (props) => {
             >
               {links.map((link, i) => (
                 <AppbarLink
-                  onClick={(_) => window.location = link.url}
+                  onClick={(_) => (window.location = link.url)}
                   key={link.title}
                 >
                   <Typography variant="a">{link.title}</Typography>

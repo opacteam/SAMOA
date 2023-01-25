@@ -2,6 +2,7 @@ import { createTheme } from "@mui/material/styles";
 
 
 const baseTheme = createTheme({
+    typography: {  fontFamily: ["Univers LT W02 55 Roman"]},
     palette: {
         mode: 'light',
         primary: {

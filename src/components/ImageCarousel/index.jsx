@@ -5,7 +5,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import SwiperCore, {
   EffectFlip,
   Navigation,
-  Autoplay ,
+  Autoplay,
   Pagination,
   FreeMode,
 } from "swiper";
@@ -31,13 +31,13 @@ const breakpoints = {
   },
 };
 
-SwiperCore.use([Navigation, Pagination, FreeMode,Autoplay ]);
+SwiperCore.use([Navigation, Pagination, FreeMode, Autoplay]);
 const Carousel = (props) => {
   let { children } = props;
 
   return (
     <Swiper
-    autoplay={{ delay: 1000 }}
+      autoplay={{ delay: 1000 }}
       freeMode={true}
       loop={true}
       speed={800}

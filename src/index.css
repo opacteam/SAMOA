@@ -1,30 +1,36 @@
+@font-face {
+  font-family: "Univers LT W02 55 Roman";
+  src:  url(./assets/fonts/font.woff2) format("woff2");
+  /* other formats include: 'woff2', 'truetype, 'opentype',
+                              'embedded-opentype', and 'svg' */
+}
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: "Univers LT W02 55 Roman";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+* {
+    font-family: "Univers LT W02 55 Roman" 
 }
 
 .hideScrollbar::-webkit-scrollbar {
-    display: none;
-    /* Safari and Chrome browsers */
+  display: none;
+  /* Safari and Chrome browsers */
 }
 
 .hideScrollbar {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* mozilla */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* mozilla */
 }
 .leaflet-container {
-    height: 500px;
-    width: 100%;
+  height: 500px;
+  width: 100%;
 }
 
 .markercluster-map {
-    height: 500px
+  height: 500px;
 }
