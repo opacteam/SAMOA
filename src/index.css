@@ -34,3 +34,10 @@ body {
 .markercluster-map {
   height: 500px;
 }
+
+.MuiMobileStepper-dot {
+    color:white !important;
+}
+
+.MuiMobileStepper-dotActive {
+}

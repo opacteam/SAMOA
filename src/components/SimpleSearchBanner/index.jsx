@@ -114,7 +114,7 @@ const Banner = (props) => {
           position: "absolute",
           bottom: 0,
           color:'white',
-          right:'50%',
+          right:'0',
           backgroundColor: "rgba(0, 0, 0, 0.4)",
         }}
       />
