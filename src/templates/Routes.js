@@ -13,7 +13,7 @@ const GenericPage = lazy(() =>
 
 const Routes = [
     { path: "/", template: HomeTemplate },
-    { path: "/archive", template: ArchivesSearchTemplate },
+    { path: "/archives", template: ArchivesSearchTemplate },
     { path: "/artifact", template: ArtifactSearchTemplate },
     { path: '/FAQ', template: FAQ },
     { path: '/summary', template: Summary }, { path: "*", template: NotFoundPageTemplate },
