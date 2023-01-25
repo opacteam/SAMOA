@@ -20,3 +20,11 @@ code {
     scrollbar-width: none;
     /* mozilla */
 }
+.leaflet-container {
+    height: 500px;
+    width: 100%;
+}
+
+.markercluster-map {
+    height: 500px
+}

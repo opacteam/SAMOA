@@ -12,8 +12,8 @@ const Home = [{
         {
             component: "Section",
             data: {
-                heading: "SURREY ARCHIVES",
-                description: "The Archives contains photos, maps, textual records, oral histories, community records, and city records.",
+                heading: "Browse by category",
+
                 btnURL: '/archive',
                 btnTitle: "Explore"
 
@@ -23,57 +23,78 @@ const Home = [{
                 data: {
                     data: [{
                             "thumbnail": "https://picsum.photos/400",
-                            "title": "Library"
+                            "title": "Photos"
                         },
                         {
                             "thumbnail": "https://picsum.photos/450",
-                            "title": "Books"
+                            "title": "Maps"
                         },
                         {
                             "thumbnail": "https://picsum.photos/500",
-                            "title": "Library"
+                            "title": "Audio/Video"
                         },
+                        {
+                            "thumbnail": "https://picsum.photos/550",
+                            "title": "Artifacts"
+                        },
+                        {
+                            "thumbnail": "https://picsum.photos/600",
+                            "title": "Textual Records"
+                        },
+                 
 
                     ]
                 }
             }]
         },
+        // {
+        //     component: "Section",
+        //     data: {
+        //         heading: "SURREY ARTIFACT COLLECTIONS",
+        //         description: "The Artifact Collection feature archaeology, ethnology, and human history materials that reflect the history of Surrey.",
+        //         btnURL: '/artifact',
+        //         btnTitle: "Explore"
+        //     },
+        //     children: [{
+        //             component: "TagCard",
+        //             data: {
+        //                 "tag": "Item",
+        //                 "title": "Nunc consequat interdum varius",
+        //                 "description": "John Doe",
+        //                 "thumbnail": "https://picsum.photos/510"
+        //             }
+        //         },
+
+        //         {
+        //             component: "TagCard",
+        //             data: {
+        //                 "tag": "Document",
+        //                 "title": "Aliquam malesuada bibendum arcu",
+        //                 "description": "Jane Doe",
+        //                 "thumbnail": "https://picsum.photos/520"
+        //             },
+        //         },
+
+
+        //     ]
+        // },
         {
             component: "Section",
             data: {
-                heading: "SURREY ARTIFACT COLLECTIONS",
-                description: "The Artifact Collection feature archaeology, ethnology, and human history materials that reflect the history of Surrey.",
-                btnURL: '/artifact',
-                btnTitle: "Explore"
+                heading: "Browse by area",
+
             },
             children: [{
-                    component: "TagCard",
-                    data: {
-                        "tag": "Item",
-                        "title": "Nunc consequat interdum varius",
-                        "description": "John Doe",
-                        "thumbnail": "https://picsum.photos/510"
-                    }
-                },
-
-                {
-                    component: "TagCard",
-                    data: {
-                        "tag": "Document",
-                        "title": "Aliquam malesuada bibendum arcu",
-                        "description": "Jane Doe",
-                        "thumbnail": "https://picsum.photos/520"
-                    },
-                },
-
-
-            ]
+                component: "Map",
+                
+            }]
         },
+
         {
             component: "Section",
             data: {
-                heading: "FEATURED COLLECTION",
-                description: "Featured Items from the Archives and Artifact Collections",
+                heading: "Recent Additions",
+                description: "Recent additions from the Archives and Artifact Collections",
 
             },
             children: [{
@@ -137,15 +158,7 @@ const Home = [{
                 }
             }]
         },
-        {
-            component: "Section",
-            data: {
-                heading: "COLLECTION MAP",
-                description: "Featured Items from the Archives and Artifact Collections",
-
-            },
-            children: []
-        },
+       
 
     ]
 }]
